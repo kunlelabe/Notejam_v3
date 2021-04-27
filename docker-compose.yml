@@ -6,7 +6,5 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    volumes:
-      - ./db/:/root/db/
-  ports:
-    - 5000:5000
+    ports:
+      - 5000:5000
