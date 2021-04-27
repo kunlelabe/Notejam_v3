@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  notejamv3:
+    image: notejamv3
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./db/:/root/db/
+    Ports:
+      - 80:80
+
+  nginx:
+    image: nginx 
+    build: 
+      context:
+      dockerfile: ./Nginx/Dockerfile
+    ports:
+      - "80:80"
