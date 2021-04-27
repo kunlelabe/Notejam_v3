@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  notejamv3:
+    image: notejamv3
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./db/:/root/db/
+  ports:
+    - 5000:5000
