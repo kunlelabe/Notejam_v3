@@ -6,7 +6,20 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    volumes: 
-      - ./db/:/root/db/
     ports:
       - 5000:5000
+      
+  nginx:
+     build: ./nginx
+     container_name: nginx
+     restart: always
+     ports:
+       - "80:80"
+   
+    
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./db/:/root/db/
