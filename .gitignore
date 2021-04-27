@@ -58,4 +58,7 @@ bower_components
 .vscode
 .bak
 
+#gradle files
+.gradle
+
 
