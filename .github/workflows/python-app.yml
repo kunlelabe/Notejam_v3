@@ -33,6 +33,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with Flask-test
       run: |
-            python db.py
-            python runserver.py
-            python tests.py
+           python tests.py
